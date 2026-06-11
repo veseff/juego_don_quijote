@@ -72,29 +72,23 @@ class DialogueBox:
             texto_surface,
             (70, 560)
         )
+
+
 capitulo_1 = [
 
-    (
-        "Narrador",
-        "Al amanecer, Don Quijote abandonó su aldea."
-    ),
+    ("Narrador",
+     "Al amanecer, Don Quijote abandonó su aldea."),
 
-    (
-        "Narrador",
-        "Rocinante avanzaba lentamente por los caminos de La Mancha."
-    ),
+    ("Narrador",
+     "Rocinante avanzaba lentamente por los caminos de La Mancha."),
 
-    (
-        "Don Quijote",
-        "Por fin comienza mi aventura."
-    ),
+    ("Don Quijote",
+     "Por fin comienza mi aventura."),
 
-    (
-        "Don Quijote",
-        "Mi nombre será conocido en todo el reino."
-    )
-
+    ("Don Quijote",
+     "Mi nombre será conocido en todo el reino.")
 ]
+
 
 capitulo_2 = [
 
@@ -111,36 +105,63 @@ capitulo_2 = [
     (
         "Narrador",
         "La realidad era bastante menos impresionante."
-    )
-
-]
-
-capitulo_3_alt = [
-
-    (
-        "Narrador",
-        "La historia tomó un rumbo inesperado."
     ),
 
     (
-        "Don Quijote",
-        "Mi aventura aún no ha terminado."
+        "Narrador",
+        "En el camino, un campesino pide ayuda."
     )
-
 ]
+
+
+final_normal = [
+
+    ("Narrador",
+     "Don Quijote continuó su aventura siguiendo el curso de la historia original."),
+
+    ("Narrador",
+     "Fin.")
+]
+
+
+capitulo_3_alt = [
+
+    ("Narrador",
+     "La historia tomó un rumbo inesperado."),
+
+    ("Don Quijote",
+     "Mi aventura aún no ha terminado.")
+]
+
 
 capitulo_4_alt = [
 
-    (
-        "Narrador",
-        "Comienza la última aventura del caballero."
-    )
+    ("Narrador",
+     "Comienza la última aventura del caballero."),
 
+    ("Narrador",
+     "Fin alternativo.")
 ]
+
 
 CAPITULOS = {
     "cap1": capitulo_1,
     "cap2": capitulo_2,
+    "final_normal": final_normal,
     "cap3_alt": capitulo_3_alt,
     "cap4_alt": capitulo_4_alt,
 }
+
+
+ORDEN_NORMAL = [
+    "cap1",
+    "cap2",
+    "final_normal"
+]
+
+ORDEN_ALTERNATIVO = [
+    "cap1",
+    "cap2",
+    "cap3_alt",
+    "cap4_alt"
+]
