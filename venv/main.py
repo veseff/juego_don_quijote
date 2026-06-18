@@ -16,7 +16,7 @@ pantalla = pygame.display.set_mode(
 )
 
 background = pygame.image.load(
-    "/home/wewo/Escritorio/proyecto_inmersivo/juego_don_quijote/venv/assets/backgrounds/mancha.jpg"
+    "/home/wewo/Escritorio/proyecto_inmersivo/juego_don_quijote/venv/assets/backgrounds/fondov1.png"
 ).convert()
 
 pygame.display.set_caption(
@@ -37,8 +37,7 @@ orden_actual = [
     "cap2"
 ]
 
-mostrar_decision = True
-print("DECISION ACTIVADA")
+mostrar_decision = False
 
 opcion_seleccionada = 0
 
@@ -83,7 +82,6 @@ while run:
                         opcion_seleccionada = 0
 
                 elif event.key == pygame.K_RETURN:
-                    print("ENTER PRESIONADO")
 
                     if opcion_seleccionada == 0:
 
@@ -118,16 +116,16 @@ while run:
                 else:
 
                     if (
-                        indice_capitulo ==
-                        len(orden_actual) - 1
+                        orden_actual == ["cap1", "cap2"]
+                        and indice_capitulo == 1
                     ):
 
-                        pass
-
-                    elif indice_capitulo == 1:
                         mostrar_decision = True
 
-                    else:
+                    elif (
+                        indice_capitulo <
+                        len(orden_actual) - 1
+                    ):
 
                         indice_capitulo += 1
 
@@ -151,7 +149,6 @@ while run:
     )
 
     if mostrar_decision:
-        print("ESTOY EN LA DECISION")
         titulo = font_opciones.render(
             "¿Que hara Don Quijote?",
             True,
